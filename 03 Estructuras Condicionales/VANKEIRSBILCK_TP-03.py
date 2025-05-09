@@ -51,4 +51,118 @@ else:
 # pantalla "Por favor, ingrese una contraseña de entre 8 y 14 caracteres". Nota: investigue el uso 
 # de la función len() en Python para evaluar la cantidad de elementos que tiene un iterable tal 
 # como una lista o un string.
+
+contr = input("Ingrese su contraseña, Por favor: ")
+
+if 8 <= len(contr) <= 14:
+  print("Ha ingresado una contraseña correcta")
+else:
+  print("Error, ingrese una contraseña de entre 8 y 14 caracteres")
+
+
+# Ejercio 6: Escribir un programa que permita ingresar una lista de números enteros y calcule la
+# moda, la mediana y la media de los números ingresados.
+# Luego, el programa deberá determinar si la distribución tiene sesgo positivo, negativo o no
+# tiene sesgo. Para ello, se deberá comparar la media, la mediana y la moda de la lista de números
+
+import random
+from statistics import mode, median, mean
+
+numeros_aleatorios = [random.randint(1, 100) for i in range(50)]
+
+moda = mode(numeros_aleatorios)
+mediana = median(numeros_aleatorios)
+media = mean(numeros_aleatorios)
+
+
+if media > mediana > moda:
+  print("Sesgo positivo o a la derecha")
+elif media < mediana < moda:
+  print("Sesgo negativo o a la izquierda")
+elif media == mediana == moda:
+  print("Sin sesgo")
+else:
+  print("No se puede determinar si esta distribución tiene sesgo o no")
+
+# Ejercicio 7: Escribir un programa que solicite una frase o palabra al usuario. Si el string ingresado 
+# termina con vocal, añadir un signo de exclamación al final e imprimir el string resultante por 
+# pantalla; en caso contrario, dejar el string tal cual lo ingresó el usuario e imprimirlo por 
+# pantalla. 
+
+frase = input("Ingrese una frase o palabra: ")
+if frase[-1].lower() in "aeiou":
+    frase += "!"
+    print(frase)
+else:   
+    print(frase)
+
+# Ejercicio 8: Escribir un programa que solicite al usuario que ingrese su nombre y el número 1, 2 o 3 
+# dependiendo de la opción que desee: 
+# 1. Si quiere su nombre en mayúsculas. Por ejemplo: PEDRO. 
+# 2. Si quiere su nombre en minúsculas. Por ejemplo: pedro. 
+# 3. Si quiere su nombre con la primera letra mayúscula. Por ejemplo: Pedro. 
+
+nombre = input("Ingrese su nombre: ")
+opcion = int(input("Ingrese 1 para mayúsculas, 2 para minúsculas o 3 para capitalizar: "))
+if opcion == 1:
+    print(nombre.upper())
+elif opcion == 2:
+    print(nombre.lower())
+elif opcion == 3:
+    print(nombre.capitalize())
+else:
+    print("Opción no válida")
+
+# Ejercicio 9: Escribir un programa que pida al usuario la magnitud de un terremoto, clasifique la 
+#magnitud en una de las siguientes categorías según la escala de Richter e imprima el resultado 
+#por pantalla:  Menor que 3: "Muy leve" (imperceptible).Mayor o igual que 3  y menor que 4: "Leve" (ligeramente perceptible). 
+# Mayor o igual que 4  y menor que 5: "Moderado" (sentido por personas, pero generalmente no causa daños). 
+# Mayor o igual que 5  y menor que 6: "Fuerte" (puede causar daños en estructuras débiles). 
+# Mayor o igual que 6  y menor que 7: "Muy Fuerte" (puede causar daños significativos). 
+# Mayor o igual que 7: "Extremo" (puede causar graves daños a gran escala). 
+
+magnitud = float(input("Ingrese la magnitud del terremoto (Segun la escala de Ritcher): "))
+if magnitud < 3:
+    print("Muy leve (imperceptible)")
+elif 3 <= magnitud < 4:
+    print("Leve (ligeramente perceptible)")
+elif 4 <= magnitud < 5:
+    print("Moderado (sentido por personas, pero generalmente no causa daños)")
+elif 5 <= magnitud < 6:
+    print("Fuerte (puede causar daños en estructuras débiles)")
+elif 6 <= magnitud < 7:
+    print("Muy Fuerte (puede causar daños significativos)")
+else:
+    print("Extremo (puede causar graves daños a gran escala)")
+
+# Ejercicio 10:  Utilizando la información aportada en la siguiente tabla sobre las estaciones del año 
+# Escribir un programa que pregunte al usuario en cuál hemisferio se encuentra (N/S), qué mes 
+# del año es y qué día es. El programa deberá utilizar esa información para imprimir por pantalla 
+# si el usuario se encuentra en otoño, invierno, primavera o verano.
+
+hemisferio = input("Ingrese el hemisferio (N/S): ").upper()
+mes = int(input("Ingrese el mes (1-12): "))
+dia = int(input("Ingrese el día (1-31): "))
+if hemisferio == "N":
+    if (mes == 3 and dia >= 20) or (mes == 4) or (mes == 5) or (mes == 6 and dia < 21):
+        print("Primavera")
+    elif (mes == 6 and dia >= 21) or (mes == 7) or (mes == 8) or (mes == 9 and dia < 23):
+        print("Verano")
+    elif (mes == 9 and dia >= 23) or (mes == 10) or (mes == 11) or (mes == 12 and dia < 21):
+        print("Otoño")
+    else:
+        print("Invierno")
+elif hemisferio == "S":
+    if (mes == 3 and dia >= 20) or (mes == 4) or (mes == 5) or (mes == 6 and dia < 21):
+        print("Otoño")
+    elif (mes == 6 and dia >= 21) or (mes == 7) or (mes == 8) or (mes == 9 and dia < 23):
+        print("Invierno")
+    elif (mes == 9 and dia >= 23) or (mes == 10) or (mes == 11) or (mes == 12 and dia < 21):
+        print("Primavera")
+    else:
+        print("Verano")
+else:
+    print("Hemisferio no válido. Por favor, ingrese N o S.")
+
+#Ejercicios terminados!!!
  
