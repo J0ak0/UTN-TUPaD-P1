@@ -1,4 +1,4 @@
-# EjEjercicio 1
+# Ejercicio 1
 print("Hola Mundo")
 
 # Ejercicio 2
