@@ -8,7 +8,7 @@ Este es un cambio en la feature branch.
 
 ## ✨ Estudiante  
 - **Nombre:** Vankeirsbilck, Joaquin Gonzalo 
-- **Comisión:** M2025-2 *[Modificar con su comisión, donde 7 es el número de comisión]*  
+- **Comisión:** M2025-2 
 
 ## 📂 Descripción del Repositorio  
 Este repositorio almacena todas los trabajos prácticos realizados durante la cursada de **Programación 1**.  

@@ -38,3 +38,18 @@ print(f"El total acumulado es: {total}")
 # Ejercicio 5: Crea un juego en el que el usuario deba adivinar un número aleatorio entre 0 y 9. Al final, el
 # programa debe mostrar cuántos intentos fueron necesarios para acertar el número.
 
+import random
+#Se generara un numero aleatorio entre 0 y 9
+numero_aleatorio = random.randint(0, 9)
+intentos = 0
+numero_usuario = -1
+
+print("Adivina el número entre 0 y 9")
+
+while numero_usuario != numero_aleatorio:
+    numero_usuario = int(input("ingresa tu numero: "))
+    intentos = intentos + 1 
+
+print("Has adivinado, el número era", numero_aleatorio," y necesitaste", intentos, "intentos.")
+
+
