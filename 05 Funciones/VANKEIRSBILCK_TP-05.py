@@ -55,4 +55,30 @@ numeros = list(range(10,31,5))
 print("La lista de números es:", numeros)
 print(f"Los primeros dos numero de la lista son: {numeros[0]} y {numeros[1]}")
 
+# Ejercicio 7: Reemplazar los dos valores centrales (índices 1 y 2) de la lista “autos” por dos nuevos valores
+# cualesquiera.
+# autos = ["sedan", "polo", "suran", "gol"]
 
+autos = ["sedan", "polo", "suran", "gol"]
+
+autos[1] = "fiesta"
+autos[2] = "focus"
+
+# Ejercicio 8: Crear una lista vacía llamada "dobles" y agregar el doble de 5, 10 y 15 usando append
+# directamente. Imprimir la lista resultante por pantalla.
+
+dobles = []
+dobles.append(5 * 2)
+dobles.append(10 * 2)
+dobles.append(15 * 2)
+print("La lista de dobles es:", dobles)
+
+# Ejercicio 9: Dada la lista “compras”, cuyos elementos representan los productos comprados por
+# diferentes clientes:
+# compras = [["pan", "leche"], ["arroz", "fideos", "salsa"],["agua"]]
+# a) Agregar "jugo" a la lista del tercer cliente usando append.
+# b) Reemplazar "fideos" por "tallarines" en la lista del segundo cliente.
+# c) Eliminar "pan" de la lista del primer cliente.
+# d) Imprimir la lista resultante por pantalla
+
+compras = [["pan", "leche"], ["arroz", "fideos", "salsa"],["agua"]]
